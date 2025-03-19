@@ -125,6 +125,7 @@
             UpdateStudentDataBtn.Text = "Update";
             UpdateStudentDataBtn.UseVisualStyleBackColor = false;
             UpdateStudentDataBtn.Visible = false;
+            UpdateStudentDataBtn.Click += UpdateStudentDataBtn_Click;
             // 
             // UpdateSearchBtn
             // 
