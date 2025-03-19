@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             AddStudentLbl = new Label();
-            StudentNoLbl = new Label();
-            StudentNoTxt = new TextBox();
             NameTxt = new TextBox();
             NameLbl = new Label();
             NicTxt = new TextBox();
@@ -50,25 +48,9 @@
             AddStudentLbl.TabIndex = 0;
             AddStudentLbl.Text = "Add Student";
             // 
-            // StudentNoLbl
-            // 
-            StudentNoLbl.AutoSize = true;
-            StudentNoLbl.Location = new Point(197, 109);
-            StudentNoLbl.Name = "StudentNoLbl";
-            StudentNoLbl.Size = new Size(69, 15);
-            StudentNoLbl.TabIndex = 1;
-            StudentNoLbl.Text = "Student_No";
-            // 
-            // StudentNoTxt
-            // 
-            StudentNoTxt.Location = new Point(341, 105);
-            StudentNoTxt.Name = "StudentNoTxt";
-            StudentNoTxt.Size = new Size(275, 23);
-            StudentNoTxt.TabIndex = 2;
-            // 
             // NameTxt
             // 
-            NameTxt.Location = new Point(341, 160);
+            NameTxt.Location = new Point(343, 129);
             NameTxt.Name = "NameTxt";
             NameTxt.Size = new Size(275, 23);
             NameTxt.TabIndex = 4;
@@ -76,7 +58,7 @@
             // NameLbl
             // 
             NameLbl.AutoSize = true;
-            NameLbl.Location = new Point(197, 164);
+            NameLbl.Location = new Point(199, 133);
             NameLbl.Name = "NameLbl";
             NameLbl.Size = new Size(39, 15);
             NameLbl.TabIndex = 3;
@@ -84,7 +66,7 @@
             // 
             // NicTxt
             // 
-            NicTxt.Location = new Point(341, 216);
+            NicTxt.Location = new Point(343, 185);
             NicTxt.Name = "NicTxt";
             NicTxt.Size = new Size(275, 23);
             NicTxt.TabIndex = 6;
@@ -92,7 +74,7 @@
             // NicLbl
             // 
             NicLbl.AutoSize = true;
-            NicLbl.Location = new Point(197, 220);
+            NicLbl.Location = new Point(199, 189);
             NicLbl.Name = "NicLbl";
             NicLbl.Size = new Size(27, 15);
             NicLbl.TabIndex = 5;
@@ -101,7 +83,7 @@
             // DobLbl
             // 
             DobLbl.AutoSize = true;
-            DobLbl.Location = new Point(197, 279);
+            DobLbl.Location = new Point(199, 248);
             DobLbl.Name = "DobLbl";
             DobLbl.Size = new Size(31, 15);
             DobLbl.TabIndex = 7;
@@ -109,7 +91,7 @@
             // 
             // DobPicker
             // 
-            DobPicker.Location = new Point(341, 275);
+            DobPicker.Location = new Point(343, 244);
             DobPicker.Name = "DobPicker";
             DobPicker.Size = new Size(275, 23);
             DobPicker.TabIndex = 8;
@@ -118,12 +100,13 @@
             // 
             AddStudentBtn.BackColor = Color.YellowGreen;
             AddStudentBtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AddStudentBtn.Location = new Point(346, 342);
+            AddStudentBtn.Location = new Point(348, 311);
             AddStudentBtn.Name = "AddStudentBtn";
             AddStudentBtn.Size = new Size(117, 33);
             AddStudentBtn.TabIndex = 9;
             AddStudentBtn.Text = "Submit";
             AddStudentBtn.UseVisualStyleBackColor = false;
+            AddStudentBtn.Click += AddStudentBtn_Click;
             // 
             // AddStudent
             // 
@@ -137,8 +120,6 @@
             Controls.Add(NicLbl);
             Controls.Add(NameTxt);
             Controls.Add(NameLbl);
-            Controls.Add(StudentNoTxt);
-            Controls.Add(StudentNoLbl);
             Controls.Add(AddStudentLbl);
             Name = "AddStudent";
             Text = "AddStudent";
@@ -149,8 +130,6 @@
         #endregion
 
         private Label AddStudentLbl;
-        private Label StudentNoLbl;
-        private TextBox StudentNoTxt;
         private TextBox NameTxt;
         private Label NameLbl;
         private TextBox NicTxt;
