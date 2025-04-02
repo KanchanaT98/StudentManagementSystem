@@ -34,12 +34,16 @@ namespace StudentManagementSystem
             studentInformationToolStripMenuItem = new ToolStripMenuItem();
             addStudentToolStripMenuItem = new ToolStripMenuItem();
             updateStudentToolStripMenuItem = new ToolStripMenuItem();
+            marksToolStripMenuItem = new ToolStripMenuItem();
+            addMarksToolStripMenuItem = new ToolStripMenuItem();
+            addMarksToolStripMenuItem1 = new ToolStripMenuItem();
+            updateMarksToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { studentToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { studentToolStripMenuItem, marksToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -74,6 +78,34 @@ namespace StudentManagementSystem
             updateStudentToolStripMenuItem.Text = "Update Student";
             updateStudentToolStripMenuItem.Click += updateStudentToolStripMenuItem_Click;
             // 
+            // marksToolStripMenuItem
+            // 
+            marksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addMarksToolStripMenuItem, addMarksToolStripMenuItem1, updateMarksToolStripMenuItem });
+            marksToolStripMenuItem.Name = "marksToolStripMenuItem";
+            marksToolStripMenuItem.Size = new Size(51, 20);
+            marksToolStripMenuItem.Text = "Marks";
+            // 
+            // addMarksToolStripMenuItem
+            // 
+            addMarksToolStripMenuItem.Name = "addMarksToolStripMenuItem";
+            addMarksToolStripMenuItem.Size = new Size(180, 22);
+            addMarksToolStripMenuItem.Text = "View Marks";
+            addMarksToolStripMenuItem.Click += ViewMarksToolStripMenuItem_Click;
+            // 
+            // addMarksToolStripMenuItem1
+            // 
+            addMarksToolStripMenuItem1.Name = "addMarksToolStripMenuItem1";
+            addMarksToolStripMenuItem1.Size = new Size(180, 22);
+            addMarksToolStripMenuItem1.Text = "Add Marks";
+            addMarksToolStripMenuItem1.Click += AddMarksToolStripMenuItem_Click;
+            // 
+            // updateMarksToolStripMenuItem
+            // 
+            updateMarksToolStripMenuItem.Name = "updateMarksToolStripMenuItem";
+            updateMarksToolStripMenuItem.Size = new Size(180, 22);
+            updateMarksToolStripMenuItem.Text = "Update Marks";
+            updateMarksToolStripMenuItem.Click += UpdateMarksToolStripMenuItem_Click;
+            // 
             // StudentManagementForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -99,5 +131,9 @@ namespace StudentManagementSystem
         private ToolStripMenuItem studentInformationToolStripMenuItem;
         private ToolStripMenuItem addStudentToolStripMenuItem;
         private ToolStripMenuItem updateStudentToolStripMenuItem;
+        private ToolStripMenuItem marksToolStripMenuItem;
+        private ToolStripMenuItem addMarksToolStripMenuItem;
+        private ToolStripMenuItem addMarksToolStripMenuItem1;
+        private ToolStripMenuItem updateMarksToolStripMenuItem;
     }
 }

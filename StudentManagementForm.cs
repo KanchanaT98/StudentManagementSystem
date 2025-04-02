@@ -6,6 +6,11 @@ namespace StudentManagementSystem
         StudentInformationForm StInfo;
         AddStudent StAdd;
         UpdateStudentInfoForm StUpdate;
+
+        AddMarksForm AddMarks;
+        ViewMarksForm ViewMarks;
+        UpdateMarksForm updateMarks;
+
         public StudentManagementForm()
         {
             InitializeComponent();
@@ -55,7 +60,7 @@ namespace StudentManagementSystem
 
         private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(StUpdate == null)
+            if (StUpdate == null)
             {
                 StUpdate = new UpdateStudentInfoForm();
                 StUpdate.MdiParent = this;
@@ -71,6 +76,54 @@ namespace StudentManagementSystem
         void StUpdate_FormClosed(object sender, FormClosedEventArgs e)
         {
             StUpdate = null;
+        }
+
+        private void AddMarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(AddMarks == null)
+            {
+                AddMarks = new AddMarksForm();
+                AddMarks.MdiParent = this;
+                AddMarks.FormClosed += new FormClosedEventHandler(AddMarksForm_Closed);
+                AddMarks.Show();
+            }
+        }
+
+        private void AddMarksForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            AddMarks = null;
+        }
+
+        private void ViewMarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ViewMarks == null)
+            {
+                ViewMarks = new ViewMarksForm();
+                ViewMarks.MdiParent = this;
+                ViewMarks.FormClosed += new FormClosedEventHandler(ViewMarksForm_Closed);
+                ViewMarks.Show();
+            }
+        }
+
+        private void ViewMarksForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            ViewMarks = null;
+        }
+
+        private void UpdateMarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (updateMarks == null)
+            {
+                updateMarks = new UpdateMarksForm();
+                updateMarks.MdiParent = this;
+                updateMarks.FormClosed += new FormClosedEventHandler(UpdateMarksForm_Closed);
+                updateMarks.Show();
+            }
+        }
+
+        private void UpdateMarksForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            updateMarks = null;
         }
     }
 }
